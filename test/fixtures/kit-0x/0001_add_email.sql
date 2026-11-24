@@ -1,0 +1,1 @@
+ALTER TABLE "tenant"."customers" ADD COLUMN "email" text;

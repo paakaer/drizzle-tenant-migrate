@@ -1,0 +1,60 @@
+{
+  "name": "drizzle-tenant-migrate",
+  "version": "0.1.0",
+  "description": "Run Drizzle migrations across every tenant schema in Postgres (schema-per-tenant).",
+  "type": "module",
+  "license": "MIT",
+  "author": "Albert Ogoe",
+  "keywords": [
+    "drizzle",
+    "drizzle-orm",
+    "drizzle-kit",
+    "postgres",
+    "postgresql",
+    "multi-tenant",
+    "schema-per-tenant",
+    "migrations"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "drizzle-tenant-migrate": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "peerDependencies": {
+    "pg": ">=8",
+    "postgres": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "pg": {
+      "optional": true
+    },
+    "postgres": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.11.0",
+    "pg": "^8.13.0",
+    "postgres": "^3.4.5",
+    "typescript": "^5.9.0"
+  }
+}

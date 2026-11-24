@@ -1,0 +1,47 @@
+{
+  "type": "diff",
+  "version": "10",
+  "dialect": "postgres",
+  "id": "0b9bd24a-eac9-46e1-a7d4-365a087cbbd6",
+  "prevIds": [
+    "b7331d84-24da-4d09-92ab-b7f76f28c5a5"
+  ],
+  "footprints": [
+    {
+      "statementType": "add_column",
+      "statementTarget": [
+        "column",
+        "tenant",
+        "customers",
+        "email"
+      ],
+      "writes": [
+        "s|col|tenant.customers.email",
+        "n|col|tenant.customers.email",
+        "e|col|tenant.customers.email"
+      ],
+      "reads": [
+        "n|tbl|tenant.customers",
+        "n|sch|tenant"
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "op": "create",
+      "row": {
+        "schema": "tenant",
+        "table": "customers",
+        "name": "email",
+        "type": "text",
+        "typeSchema": null,
+        "notNull": false,
+        "dimensions": 0,
+        "default": null,
+        "generated": null,
+        "identity": null,
+        "entityType": "columns"
+      }
+    }
+  ]
+}
