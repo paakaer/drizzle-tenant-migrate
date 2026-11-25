@@ -30,7 +30,7 @@
     }
   },
   "bin": {
-    "drizzle-tenant-migrate": "./dist/cli.js"
+    "drizzle-tenant-migrate": "dist/cli.js"
   },
   "files": [
     "dist",
