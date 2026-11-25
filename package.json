@@ -5,6 +5,14 @@
   "type": "module",
   "license": "MIT",
   "author": "Albert Ogoe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paakaer/drizzle-tenant-migrate.git"
+  },
+  "homepage": "https://github.com/paakaer/drizzle-tenant-migrate#readme",
+  "bugs": {
+    "url": "https://github.com/paakaer/drizzle-tenant-migrate/issues"
+  },
   "keywords": [
     "drizzle",
     "drizzle-orm",
